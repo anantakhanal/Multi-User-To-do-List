@@ -1,0 +1,21 @@
+
+ {% extends "base.html" %} 
+ {% block content %}
+
+ <div class="container">
+     <div class="row">
+   <h3 class="align-content-center ">Sign up page</h3> 
+   <h6>Please enter your Username and Password</h6>
+    <div class="col-lg-5 shadow p-4 mx-auto p-0 ">
+        <div class="alert alert-success"><h2> Create Account</h2></div>
+        <div class="p-4">
+            <form method="POST" action="/signup/">
+                {% csrf_token %}
+                {{ form.as_ul  }}
+            <input  type="submit" value="Create Account" class="btn btn-success my-3">
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+    {% endblock %}
